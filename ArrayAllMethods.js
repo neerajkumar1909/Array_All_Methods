@@ -51,7 +51,13 @@ console.log('fill', m)  // (3) [10, 10, 10]
 var n = [1, 2, 3].reduce((acc, val) => {
     // return acc + val // output : 6;
 
-    return acc + val + 5 // output : 16 , dont know why!
+    return acc + val + 1 // output : 9
+            /*
+                // Explanation:  acc + val + 1, which means
+                    iteration1 : 0 + 1 + 1 = 2
+                    iteration2 : 2 + 2 + 1 = 5
+                    iteration3 : 5 + 3 + 1 = 9
+            */
 });
 console.log('reduce', n);
 
